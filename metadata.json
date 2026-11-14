@@ -1,0 +1,6 @@
+{
+  "name": "El Zahra Agency",
+  "description": "El Zahra Agency — Perlindungan hayat, kesihatan, simpanan, dan penyelesaian manfaat pekerja yang dipercayai sejak 1972.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
