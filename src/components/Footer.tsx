@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import logoWebp from '../assets/images/logo-el-zahra.webp';
 import type { SiteCopy } from '../data/siteContent';
 
 interface FooterProps {
@@ -19,9 +20,18 @@ export function Footer({ copy, onNavigateTopic }: FooterProps) {
       <div className="container-x grid gap-12 py-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-accent font-serif text-lg font-semibold text-accent-foreground">
-              {copy.brand.monogram}
-            </span>
+            <picture className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-white p-0.5 shadow-soft">
+              <source type="image/webp" srcSet={logoWebp} />
+              <img
+                src="/assets/aistudio/redesign-the-el-so-it-look-stunning_f3423146.png"
+                alt={copy.brand.fullName}
+                width={44}
+                height={44}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-contain"
+              />
+            </picture>
             <span className="font-serif text-xl">{copy.brand.fullName}</span>
           </div>
 

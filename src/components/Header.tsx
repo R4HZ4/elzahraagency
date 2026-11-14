@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown, Menu, Phone, Search, X } from 'lucide-react';
+import logoWebp from '../assets/images/logo-el-zahra.webp';
 import type { Language, SiteCopy } from '../data/siteContent';
 
 interface HeaderProps {
@@ -124,9 +125,17 @@ export function Header({
           }}
           className="flex shrink-0 items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         >
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-primary font-serif text-lg font-semibold text-primary-foreground">
-            {copy.brand.monogram}
-          </span>
+          <picture className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-white p-0.5 ring-1 ring-border/70">
+            <source type="image/webp" srcSet={logoWebp} />
+            <img
+              src="/assets/aistudio/redesign-the-el-so-it-look-stunning_f3423146.png"
+              alt={copy.brand.fullName}
+              width={44}
+              height={44}
+              decoding="async"
+              className="h-full w-full object-contain"
+            />
+          </picture>
           <span className="leading-tight">
             <span className="block font-serif text-lg font-semibold text-foreground whitespace-nowrap">
               {copy.brand.name}
